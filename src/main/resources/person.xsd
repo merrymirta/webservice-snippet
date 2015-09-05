@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:tns="http://webservice.gvvinblade.net/personservice"
+           targetNamespace="http://webservice.gvvinblade.net/personservice"
+           elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0">
+
+    <xs:complexType name="Person">
+        <xs:sequence>
+            <xs:element name="firstName" type="xs:string" maxOccurs="1" nillable="false"/>
+            <xs:element name="lastName" type="xs:string" maxOccurs="1" nillable="false"/>
+            <xs:element name="age" type="tns:unsignedInteger" maxOccurs="1" nillable="false"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:simpleType name="unsignedInteger">
+        <xs:restriction base="xs:integer">
+            <xs:minInclusive value="0"/>
+            <xs:maxInclusive value="100"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+</xs:schema>
