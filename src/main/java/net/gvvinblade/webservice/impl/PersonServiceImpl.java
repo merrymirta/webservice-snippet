@@ -1,7 +1,6 @@
 package net.gvvinblade.webservice.impl;
 
-import net.gvvinblade.webservice.contract.RestServiceEndpoint;
-import net.gvvinblade.webservice.contract.SoapServiceEndpoint;
+import net.gvvinblade.webservice.contract.PersonService;
 import net.gvvinblade.webservice.domain.Person;
 
 import javax.ejb.Stateless;
@@ -13,7 +12,7 @@ import java.util.concurrent.ConcurrentHashMap;
  * Created by gvvin on 04.09.2015.
  */
 @Stateless
-public class ServiceImpl implements SoapServiceEndpoint, RestServiceEndpoint {
+public class PersonServiceImpl implements PersonService {
 
     private final Map<String, Person> personMap = new ConcurrentHashMap<>();
 

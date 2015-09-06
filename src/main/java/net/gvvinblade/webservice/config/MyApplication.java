@@ -1,4 +1,6 @@
-package net.gvvinblade.webservice.endpoint;
+package net.gvvinblade.webservice.config;
+
+import net.gvvinblade.webservice.endpoint.RestServiceEndpointImpl;
 
 import javax.ws.rs.ApplicationPath;
 import javax.ws.rs.core.Application;
@@ -13,6 +15,6 @@ import java.util.Set;
 public class MyApplication extends Application {
     @Override
     public Set<Class<?>> getClasses() {
-        return Collections.singleton(RestServiceEndpoint.class);
+        return Collections.singleton(RestServiceEndpointImpl.class);
     }
 }

@@ -1,8 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
            xmlns:tns="http://webservice.gvvinblade.net/personservice"
+           xmlns:jaxb="http://java.sun.com/xml/ns/jaxb"
+           xmlns:xjc="http://java.sun.com/xml/ns/jaxb/xjc"
            targetNamespace="http://webservice.gvvinblade.net/personservice"
-           elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0">
+           elementFormDefault="qualified"
+           attributeFormDefault="unqualified"
+           version="1.0"
+           jaxb:extensionBindingPrefixes="xjc"
+           jaxb:version="2.1">
+
+    <xs:annotation>
+        <xs:appinfo>
+            <jaxb:globalBindings generateIsSetMethod="true">
+                <xjc:serializable uid="1"/>
+            </jaxb:globalBindings>
+        </xs:appinfo>
+    </xs:annotation>
 
     <xs:complexType name="Person">
         <xs:sequence>

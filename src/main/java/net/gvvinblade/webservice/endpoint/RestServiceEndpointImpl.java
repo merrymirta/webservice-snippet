@@ -1,5 +1,6 @@
 package net.gvvinblade.webservice.endpoint;
 
+import net.gvvinblade.webservice.contract.RestServiceEndpoint;
 import net.gvvinblade.webservice.domain.Person;
 
 import javax.ejb.EJB;
@@ -12,10 +13,10 @@ import javax.inject.Named;
  */
 @Named
 @RequestScoped
-public class RestServiceEndpoint implements net.gvvinblade.webservice.contract.RestServiceEndpoint {
+public class RestServiceEndpointImpl implements RestServiceEndpoint {
 
     @EJB
-    net.gvvinblade.webservice.contract.RestServiceEndpoint delegate;
+    RestServiceEndpoint delegate;
 
     @Override
     public void add(Person person) {
