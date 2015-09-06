@@ -2,14 +2,14 @@ package net.gvvinblade.webservice.contract;
 
 import net.gvvinblade.webservice.domain.Person;
 
-import javax.ejb.Remote;
-import javax.ws.rs.*;
+import javax.ejb.Local;
+import javax.ws.rs.PathParam;
 
 /**
  * Created by gvvin on 06.09.2015.
  *
  */
-@Remote
+@Local
 public interface PersonService {
     void add(Person person);
 

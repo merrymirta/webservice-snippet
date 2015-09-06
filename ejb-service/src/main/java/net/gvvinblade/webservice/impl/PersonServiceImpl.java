@@ -3,7 +3,7 @@ package net.gvvinblade.webservice.impl;
 import net.gvvinblade.webservice.contract.SoapServiceEndpoint;
 import net.gvvinblade.webservice.domain.Person;
 
-import javax.ejb.Stateless;
+import javax.ejb.Singleton;
 import javax.jws.WebService;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
@@ -12,7 +12,7 @@ import java.util.concurrent.ConcurrentHashMap;
  *
  * Created by gvvin on 04.09.2015.
  */
-@Stateless
+@Singleton
 @WebService(name = "PersonService", serviceName = "PersonService",
         portName = "PersonServicePort",
         endpointInterface = "net.gvvinblade.webservice.contract.SoapServiceEndpoint")

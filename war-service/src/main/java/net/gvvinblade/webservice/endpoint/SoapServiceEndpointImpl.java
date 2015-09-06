@@ -1,5 +1,6 @@
 package net.gvvinblade.webservice.endpoint;
 
+import net.gvvinblade.webservice.contract.PersonService;
 import net.gvvinblade.webservice.contract.SoapServiceEndpoint;
 import net.gvvinblade.webservice.domain.Person;
 
@@ -18,7 +19,7 @@ import javax.servlet.annotation.WebServlet;
 public class SoapServiceEndpointImpl implements SoapServiceEndpoint {
 
     @EJB
-    private SoapServiceEndpoint delegate;
+    private PersonService delegate;
 
     @Override
     public void add(Person person) {
