@@ -18,7 +18,7 @@ import javax.jws.soap.SOAPBinding;
 public interface SoapServiceEndpoint {
 
     @WebMethod(operationName = "add", action="urn:add")
-    void add(@WebParam(name = "Person", partName = "person")Person person);
+    void add(@WebParam(name = "Person", partName = "person") Person person);
 
     @WebMethod(operationName = "info", action="urn:info")
     @WebResult(name = "Person", partName = "person") Person info(@WebParam(name = "name", partName = "name") String name);
